@@ -1,0 +1,51 @@
+<h1>Todo-list!</h1>
+
+<div class="addingTasks">
+  <div class="amount">Antal: {{amount}}</div>
+  <button class="addTask" (click)="addTask()">
+    Lägg till en task
+  </button>
+
+</div>
+<div class="container">
+  <div class="task" *ngFor="let task of taskList; let i = index">
+    <div>
+      <div class="titleContainer">
+        <div class="title">Titel:</div>
+        <div class="date">
+          {{task.date}} CET
+        </div>
+      </div>
+
+      <div *ngIf="task.completed;else forTitleContent">
+        <input class="trueForm" [(ngModel)]="task.title" type="text">
+      </div>
+
+      <ng-template #forTitleContent>
+        <input [(ngModel)]="task.title" type="text">
+      </ng-template>
+
+    </div>
+
+    <div class="description">Info:</div>
+
+    <div *ngIf="task.completed;else forDescriptionContent">
+      <input class="trueForm" [(ngModel)]="task.description" type="text">
+    </div>
+
+    <ng-template #forDescriptionContent>
+      <input [(ngModel)]="task.description" type="text">
+    </ng-template>
+
+    <div class="a">
+      <input type="checkbox" class="checkbox" [(ngModel)]="task.completed">
+
+    </div>
+    <div>
+      <div class="remove">
+        <button (click)='removeTask(i)'>Ta bort task</button>
+      </div>
+    </div>
+
+  </div>
+</div>

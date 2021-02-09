@@ -32,6 +32,8 @@ export class AppComponent {
   
 })
 
+
+
 export class AppaComponent{
   public constructor(private newtitle:Title ) {}
 
