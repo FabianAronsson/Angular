@@ -2,6 +2,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.header{
+  font-size: 3rem;
+  text-align: center;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -45,7 +49,7 @@ select {
   background-color: hsl(189, 75%, 48%);
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin-left: 3rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -58,6 +62,7 @@ h1 {
 .addingTasks {
   display: flex;
   justify-content: center;
+  margin-top: 4rem;
 }
 
 .titleContainer {
@@ -67,4 +72,14 @@ h1 {
 
 .trueForm {
   text-decoration: line-through;
+}
+
+.remove button{
+  background-color: hsl(2, 75%, 48%);
+  color: white;
+  padding: 14px 20px;
+  
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

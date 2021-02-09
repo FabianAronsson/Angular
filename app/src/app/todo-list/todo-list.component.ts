@@ -9,7 +9,6 @@ import { formatDate } from '@angular/common';
 })
 export class TodoListComponent implements OnInit {
   public amount: number = 0;
-  public strikeThrough = "line-through";
   constructor() { }
 
   ngOnInit(): void {
@@ -29,10 +28,10 @@ export class TodoListComponent implements OnInit {
       this.amount -= 1;
     }
   }
-  setStrikeThrough(index: number) {
-    if (index > -1) {
-      this.taskList[index];
-    }
+  
+  removeAll(){
+    this.taskList = [];
+    this.amount = 0;
   }
 }
 

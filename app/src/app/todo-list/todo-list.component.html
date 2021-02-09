@@ -1,12 +1,17 @@
-<h1>Todo-list!</h1>
+<p class="header">Todo-list!</p>
 
 <div class="addingTasks">
   <div class="amount">Antal: {{amount}}</div>
-  <button class="addTask" (click)="addTask()">
-    Lägg till en task
-  </button>
-
+  <div class="addTask">
+    <button (click)="addTask()">
+      Lägg till en task
+    </button>
+  </div>
+  <div class="remove removeButton">
+    <button (click)='removeAll()'>Ta bort alla tasks</button>
+  </div>
 </div>
+
 <div class="container">
   <div class="task" *ngFor="let task of taskList; let i = index">
     <div>
@@ -37,10 +42,7 @@
       <input [(ngModel)]="task.description" type="text">
     </ng-template>
 
-    <div class="a">
       <input type="checkbox" class="checkbox" [(ngModel)]="task.completed">
-
-    </div>
     <div>
       <div class="remove">
         <button (click)='removeTask(i)'>Ta bort task</button>
