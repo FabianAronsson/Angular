@@ -3,7 +3,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppaComponent, AppComponent } from './app.component';
+import { AppaComponent, AppComponent, DefaultText } from './app.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { TodoListComponent } from './todo-list/todo-list.component';
 
@@ -12,6 +12,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     AppComponent,
     AppaComponent,
     TodoListComponent,
+    DefaultText
   ],
   imports: [
     BrowserModule,
